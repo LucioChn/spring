@@ -45,7 +45,7 @@ public class DynamicScheduledTask {
     }
 
     /**
-     * 改变调度的时间，先停止定时器再启动定时器
+     * 改变调度的时间，先停止定时器再启动新的定时器
      */
     public void changeTask() {
         // 停止定时器

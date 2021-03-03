@@ -21,10 +21,10 @@ public class ScheduledTask {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ScheduledTask.class);
 
-//    @Scheduled(cron = "${cron.exp}")
-//    public void test() {
-//        LOGGER.info(">>> ScheduledTask test... ");
-//    }
+    @Scheduled(cron = "${cron.exp}")
+    public void test() {
+        LOGGER.info(">>> ScheduledTask test... ");
+    }
 
 //    @Scheduled(fixedDelay = 1000)
 //    public void test() {
@@ -77,19 +77,19 @@ public class ScheduledTask {
 //        LOGGER.info(">>> ScheduledTask test... ");
 //    }
 
-    @Scheduled(cron = "0/5 * * * * ?", zone = "Asia/Shanghai")
-    public void test() {
-        TimeZone defaultTimeZone = TimeZone.getDefault();
-        LOGGER.info(">>> ScheduledTask test... " + defaultTimeZone.getID());
-        // 打印出可取得的所有时区ID
-        String[] availableIDs = TimeZone.getAvailableIDs();
-        System.out.println(Arrays.toString(availableIDs));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
+//    @Scheduled(cron = "0/5 * * * * ?", zone = "Asia/Shanghai")
+//    public void test() {
+//        TimeZone defaultTimeZone = TimeZone.getDefault();
+//        LOGGER.info(">>> ScheduledTask test... " + defaultTimeZone.getID());
+//        // 打印出可取得的所有时区ID
+//        String[] availableIDs = TimeZone.getAvailableIDs();
+//        System.out.println(Arrays.toString(availableIDs));
+//        try {
+//            Thread.sleep(2000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 //    @Scheduled(cron = "${cron.exp}")
 //    public void test() {
