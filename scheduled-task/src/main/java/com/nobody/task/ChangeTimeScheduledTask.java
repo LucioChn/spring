@@ -24,14 +24,14 @@ public class ChangeTimeScheduledTask implements SchedulingConfigurer {
 
     @Override
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
-        // 定时任务要执行的方法
-        Runnable task = () -> LOGGER.info(">>> configureTasks ...");
-        // 调度实现的时间控制
-        Trigger trigger = triggerContext -> {
-            CronTrigger cronTrigger = new CronTrigger(expression);
-            return cronTrigger.nextExecutionTime(triggerContext);
-        };
-        taskRegistrar.addTriggerTask(task, trigger);
+//        // 定时任务要执行的方法
+//        Runnable task = () -> LOGGER.info(">>> configureTasks ...");
+//        // 调度实现的时间控制
+//        Trigger trigger = triggerContext -> {
+//            CronTrigger cronTrigger = new CronTrigger(expression);
+//            return cronTrigger.nextExecutionTime(triggerContext);
+//        };
+//        taskRegistrar.addTriggerTask(task, trigger);
     }
 
     public String getExpression() {
